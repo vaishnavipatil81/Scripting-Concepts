@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loops Different Output</title>
+</head>
+<body>
+
+<h2>Loops with Different Output</h2>
+<div id="output"></div>
+
+<script>
+let result = "";
+
+
+result += "<b>FOR LOOP (1 to 5)</b><br>";
+for (let i = 1; i <= 5; i++) {
+    result += i + "<br>";
+}
+
+
+result += "<br><b>WHILE LOOP (Even Numbers)</b><br>";
+let i = 2;
+while (i <= 10) {
+    result += i + "<br>";
+    i += 2;
+}
+
+
+result += "<br><b>DO-WHILE LOOP (Squares)</b><br>";
+let j = 1;
+do {
+    result += (j * j) + "<br>";
+    j++;
+} while (j <= 5);
+
+
+result += "<br><b>FOREACH LOOP (Names)</b><br>";
+let names = ["Vaishnavi", "Sakshi", "Anisha"];
+names.forEach(function(name) {
+    result += name + "<br>";
+});
+
+document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

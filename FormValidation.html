@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name: <br>
+    <input type="text" id="name"><br><br>
+
+    Email: <br>
+    <input type="text" id="email"><br><br>
+
+    Age: <br>
+    <input type="text" id="age"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<p id="message" style="color:red;"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let age = document.getElementById("age").value.trim();
+
+    if (name === "") {
+        document.getElementById("message").innerHTML = "Name cannot be empty!";
+        return false;
+    }
+
+    if (email === "") {
+        document.getElementById("message").innerHTML = "Email cannot be empty!";
+        return false;
+    }
+
+    if (age === "" || isNaN(age) || age < 18) {
+        document.getElementById("message").innerHTML = "Enter valid age (18+ only)";
+        return false;
+    }
+
+    document.getElementById("message").style.color = "green";
+    document.getElementById("message").innerHTML = "Form Submitted Successfully ✔";
+    return false; 
+}
+</script>
+
+</body>
+</html>

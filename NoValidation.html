@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Validation</title>
+</head>
+<body>
+
+  <h2>Number Validation </h2>
+
+  <form onsubmit="return validateNumber()">
+    Enter a number:
+    <input type="text" id="num">
+    <br><br>
+    <span id="error" style="color:red"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateNumber() {
+      let num = document.getElementById("num").value;
+      let error = document.getElementById("error");
+
+     
+      if (num === "") {
+        error.innerHTML = "Number field must not be empty";
+        return false;
+      }
+
+      
+      if (isNaN(num)) {
+        error.innerHTML = "Only numbers are allowed";
+        return false;
+      }
+
+      
+      error.innerHTML = "";
+      return true; 
+    }
+  </script>
+
+</body>
+</html>

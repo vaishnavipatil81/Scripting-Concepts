@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max, Min, Median of 3 Numbers</title>
+</head>
+<body>
+
+<h3>Find Maximum, Minimum, Median of 3 Numbers</h3>
+
+<script>
+    let a = Number(prompt("Enter first number:"));
+    let b = Number(prompt("Enter second number:"));
+    let c = Number(prompt("Enter third number:"));
+
+    let max, min, med;
+
+    
+    if (a - b > 0 && a - c > 0) {
+        max = a;
+    } else if (b - a > 0 && b - c > 0) {
+        max = b;
+    } else {
+        max = c;
+    }
+
+    if (a - b < 0 && a - c < 0) {
+        min = a;
+    } else if (b - a < 0 && b - c < 0) {
+        min = b;
+    } else {
+        min = c;
+    }
+
+    med = a + b + c - max - min;
+
+ 
+    document.write("<b>Maximum:</b> " + max + "<br>");
+    document.write("<b>Minimum:</b> " + min + "<br>");
+    document.write("<b>Median:</b> " + med + "<br>");
+</script>
+
+</body>
+</html>

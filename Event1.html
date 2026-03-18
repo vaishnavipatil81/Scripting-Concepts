@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Event</title>
+</head>
+<body onclick="changeColor()">
+
+<h2>Click anywhere on the page</h2>
+
+<script>
+    let colors = ["lightblue", "lightgreen", "lightpink", "lavender", "lightyellow"];
+    let index = 0;
+
+    function changeColor() {
+        document.body.style.backgroundColor = colors[index];
+        index = (index + 1) % colors.length;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Area of Rectangle</title>
+</head>
+<body>
+
+  <h2>Area of Rectangle</h2>
+  <p id="output"></p>
+
+  <script>
+   
+    let length = prompt("Enter the length of the rectangle:");
+    let width = prompt("Enter the width of the rectangle:");
+
+    
+    length = Number(length);
+    width = Number(width);
+
+   
+    let area = length * width;
+
+    
+    document.getElementById("output").innerHTML =
+      "Length = " + length + "<br>" +
+      "Width = " + width + "<br>" +
+      "Area of Rectangle = " + area;
+  </script>
+
+</body>
+</html>

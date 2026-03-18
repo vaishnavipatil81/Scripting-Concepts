@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Program</title>
+</head>
+<body>
+
+  <h2>Student Details</h2>
+  <p id="output"></p>
+
+  <script>
+    class Student {
+      constructor(rollNo, name, age, course) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.age = age;
+        this.course = course;
+      }
+
+      displayDetails() {
+        return (
+          "Roll No: " + this.rollNo + "<br>" +
+          "Name: " + this.name + "<br>" +
+          "Age: " + this.age + "<br>" +
+          "Course: " + this.course
+        );
+      }
+    }
+
+   
+    let rollNo = prompt("Enter Roll Number:");
+    let name = prompt("Enter Name:");
+    let age = prompt("Enter Age:");
+    let course = prompt("Enter Course:");
+
+    
+    const student1 = new Student(rollNo, name, age, course);
+
+   
+    document.getElementById("output").innerHTML =
+      student1.displayDetails();
+  </script>
+
+</body>
+</html>
